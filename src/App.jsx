@@ -14,7 +14,7 @@ function App() {
         <Navbar/>
         <div >
           <Routes>
-            <Route path="/portfolio" element={<Home />} />
+            <Route path="/myPortfolio" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/" element={<Home />} />
             <Route path="/brown" element={<Embeded />} />
