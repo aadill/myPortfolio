@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/LogoCircle.png";
 import "./navbar.css";
 import { useLocation } from "react-router-dom";
-import Resume from "../assets/Resume_Mohammed Adil.pdf";
+import Resume from "../assets/Mohammed Adil_BI Developer.pdf";
 import { MdDarkMode} from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { useTheme } from "./ThemeContext";

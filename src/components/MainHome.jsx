@@ -7,14 +7,16 @@ import Down from "../assets/down.png";
 import DownLight from "../assets/downLight.png";
 import Right from "../assets/ra.png";
 import Footer from "./Footer";
-import snap from "../assets/snap.png";
+import brown from "../assets/Brown.png";
+import diversity from "../assets/Diversity.png";
+import cr from "../assets/CustomerRetention.png";
 import { useTheme } from "./ThemeContext";
 import { GiSkills } from "react-icons/gi";
 import RadarChart from "./SkillChar";
 import { MdOutlineWorkHistory } from "react-icons/md";
 import ToolSection from "./toolsSection.jsx";
 import Parallax from "./parallelax.jsx";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   const { theme, toggleTheme } = useTheme();
 
@@ -87,50 +89,73 @@ const Home = () => {
           <div className="col-md-6">
             <div className="img-hover-shadow tag-holder-2 w-col w-col-5 custom-card-2">
               <a>
-                <img src={snap} alt="Home" className="img-fluid proj_img" />
+                <img src={brown} alt="Home" className="img-fluid proj_img" />
               </a>
             </div>
             <h5 className="mb-4">
-              <b>Project 1</b>
+              <b>Brown Bag</b>
             </h5>
             <div className="tag-divider"></div>
             <p className="proj_desc">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Distinctio, repudiandae. Fuga quasi aliquam voluptatem aspernatur.
-              Earum, facilis ipsa! Deleniti itaque quisquam quos sequi labore
-              nobis?
+              This Dashboard showcases different dataset. This features many UI capablities that Power BI provide.
             </p>
             <div className="wrapper">
-              <a href="" className="button w-inline-block">
+                <Link to="/brown" className="button w-inline-block">
                 <div className="text-block-37">Learn More</div>
                 <img src={Right} width="48" alt="" className="image-61" />
-              </a>
+                </Link>
             </div>
           </div>
           <div className="col-md-6">
             <div className="img-hover-shadow tag-holder-2 w-col w-col-5 custom-card-2">
               <a>
-                <img src={snap} alt="Home" className="img-fluid proj_img" />
+                <img src={cr} alt="Home" className="img-fluid proj_img" />
               </a>
             </div>
             <h5 className="mb-4">
-              <b>Project 1</b>
+              <b>Customer Retention</b>
             </h5>
             <div className="tag-divider"></div>
             <p className="proj_desc">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Distinctio, repudiandae. Fuga quasi aliquam voluptatem aspernatur.
-              Earum, facilis ipsa! Deleniti itaque quisquam quos sequi labore
-              nobis?
+              Customer Retention showcases customer churn rate and the reasons of the customer declining.
+              It carefully analyses and identifies the key factors dependent on the customer churn rate.
+              Organisation can utilise these to maintain the customer and determine the factors.
             </p>
             <div className="wrapper">
-              <a href="" className="button w-inline-block">
+              <Link to="/customer" className="button w-inline-block">
                 <div className="text-block-37">Learn More</div>
                 <img src={Right} width="48" alt="" className="image-61" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
+
+        {/* second row */}
+        <div className="row">
+          <div className="col-md-6">
+            <div className="img-hover-shadow tag-holder-2 w-col w-col-5 custom-card-2">
+              <a>
+                <img src={diversity} alt="Home" className="img-fluid proj_img" />
+              </a>
+            </div>
+            <h5 className="mb-4">
+              <b>Diversity & Inclsion</b>
+            </h5>
+            <div className="tag-divider"></div>
+            <p className="proj_desc">
+              Detailed employee information, It helps leaders understand the current state of 
+              their workforce in terms of diversity across various demographics, identify gaps, 
+              and measure the effectiveness of inclusion initiatives.
+            </p>
+            <div className="wrapper">
+            <Link to="/diversity" className="button w-inline-block">
+                <div className="text-block-37">Learn More</div>
+                <img src={Right} width="48" alt="" className="image-61" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div className="tag-divider-section"></div>
       {/* <div id="skills" className="skills">

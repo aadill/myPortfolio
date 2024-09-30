@@ -3,9 +3,12 @@ import React from 'react';
 import { Radar } from 'react-chartjs-2';
 import { Chart as ChartJS, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend } from 'chart.js';
 
+import { useTheme } from "./ThemeContext";
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 const RadarChart = () => {
+  const { theme, toggleTheme } = useTheme();
+  const isDarkMode = theme == "dark"?true:false;
   const data = {
     labels: ['Analytical Thinking', 'Statistical Knowledge', 'Data Visualization', 'Programming', 'Machine Learning', 'Business Acumen', 'Communication Skills'],
     datasets: [
@@ -37,9 +40,10 @@ const RadarChart = () => {
     plugins: {
         legend: {
             labels: {
+              color:isDarkMode?'white':'black',
                 // This more specific font property overrides the global property
                 font: {
-                    size: 12
+                    size: 16
                 }
             },
           display: true, // Hide the legend
@@ -47,15 +51,17 @@ const RadarChart = () => {
       },
     scales: {
       r: {
-        
         angleLines: {
           display: false,
         },
+        pointLabels: {
+          color: isDarkMode?'white':'black',// Change radar chart labels color
+          font: {
+            size: 14, // Change label font size if needed
+          },
+        },
         ticks: {
-            display: false, // Hide axis ticks
-            font: {
-                size: 10,
-            }
+            display: false
           },
         suggestedMin: 0,
         suggestedMax: 100,

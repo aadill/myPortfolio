@@ -110,7 +110,7 @@ const Parallaxs = () => {
               </ParallaxLayer>
 
               <ParallaxLayer
-                sticky={{ start: 1, end: 1.8 }}
+                sticky={{ start: 0.9, end: 1.8 }}
                 style={{ textAlign: "center" }}
               >
                 <div className="skill-card">
@@ -138,7 +138,7 @@ const Parallaxs = () => {
               </ParallaxLayer>
 
               <ParallaxLayer
-                sticky={{ start: 2.3, end: 3}}
+                sticky={{ start: 2.2, end: 2.8}}
                 style={{ textAlign: "center" }}
               >
                 <div className="skill-card">
@@ -157,7 +157,7 @@ const Parallaxs = () => {
                 </div>
               </ParallaxLayer>
               <ParallaxLayer
-                offset={2.9}
+                offset={2.6}
                 speed={1}
                 onClick={() => ref.current.scrollTo(0)}
               >
