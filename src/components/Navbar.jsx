@@ -26,7 +26,7 @@ const Navbar = () => {
         <li
           className={splitLocation[1] === "" ? "active a-navItem" : "a-navItem"}
         >
-          <Link to="/" className="a-navLink">
+          <Link to="/myPortfolio" className="a-navLink">
             home.
           </Link>
         </li>
