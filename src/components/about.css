@@ -219,7 +219,7 @@ h2 {
   width: 100px;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 720px) {
   .exp {
     margin-left: 10%;
     margin-right: 10%;

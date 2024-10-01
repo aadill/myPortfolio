@@ -323,7 +323,11 @@
     justify-content: center;
   }
   .pro2{
-    margin-bottom: 10% !important;
+    margin-bottom: 15% !important;
+  }
+  .subTitle{
+    font-size: 30px;
+    margin-right: 10% !important;
   }
 }
 
@@ -376,6 +380,6 @@
     justify-content: center;
   }
   .pro2{
-    margin-bottom:10% !important;
+    margin-bottom:15% !important;
   }
 }
