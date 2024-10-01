@@ -1,13 +1,8 @@
-/* .a-logoContainer {
-  position: relative;
-  float: left;
-  display: flex;
-  align-items: center;
-  
-} */
+/* Base styles for the navbar */
 .a-logo {
   height: 60px;
 }
+
 .a-navbar {
   display: flex;
   align-items: center;
@@ -16,45 +11,39 @@
   max-width: 1000px;
   margin-top: 20px;
   border-radius: 999px;
-  /* border: 2px solid rgba(180, 177, 177, 0.17); */
   margin-right: auto;
   margin-left: auto;
   backdrop-filter: saturate(180%) blur(20px);
   position: fixed;
   z-index: 10;
-  top: 0%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
 }
+
+/* Navigation list for all screen sizes (row layout by default) */
 .a-navList {
   list-style: none;
   display: flex;
+  flex-direction: row;  /* Row layout on both large and small screens */
   padding: 0;
 }
-ul{
-  margin-top: auto!important;
-  margin-bottom: auto!important;
-}
+
 .a-navItem {
-  margin-right: 80px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-right: 40px;  /* Space between nav items */
 }
+
 .a-navLink {
-  /* color: #45505f; */
   color: var(--font-color);
   font-weight: 700;
 }
 
-.a-linkContainer{
-    /* display: flex; */
-    align-items: center;
-}
-.active{
+/* Active class for the current page */
+.active {
   text-decoration: underline;
 }
-.theme-btn{
+
+.theme-btn {
   width: 2.5rem;
   height: 2.5rem;
   font-size: 1.2rem;
@@ -62,4 +51,73 @@ ul{
   cursor: pointer;
   background-color: white;
   color: black;
+}
+
+/* Hide the hamburger icon on large screens */
+.hamburger {
+  display: none;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 768px) {
+  /* Show hamburger on smaller screens */
+  .hamburger {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    margin-right: 10px;
+  }
+
+  /* Hide the menu initially on small screens */
+  .a-navList {
+    display: none;
+    flex-direction: column;  /* Change to column layout for dropdown effect */
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 80px; /* Position the dropdown below the navbar */
+    left: 0px;
+    right: 0px;
+    background-color: rgb(57, 56, 56); /* Background color for the dropdown */
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;  /* Smooth dropdown animation */
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none !important;
+  }
+
+  /* Show the menu when active (dropdown) */
+  .a-navList.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .a-navItem {
+    margin: 15px 0;  /* Space between items in dropdown */
+  }
+
+  .theme-btn {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .a-navbar {
+    padding: 10px;
+  }
+
+  .a-navLink {
+    font-size: 14px;
+  }
+
+  .theme-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
 }

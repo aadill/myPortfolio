@@ -17,6 +17,7 @@ import { MdOutlineWorkHistory } from "react-icons/md";
 import ToolSection from "./toolsSection.jsx";
 import Parallax from "./parallelax.jsx";
 import { Link } from "react-router-dom";
+import Skills from "./Skills.jsx";
 const Home = () => {
   const { theme, toggleTheme } = useTheme();
 
@@ -106,7 +107,7 @@ const Home = () => {
                 </Link>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 pro2">
             <div className="img-hover-shadow tag-holder-2 w-col w-col-5 custom-card-2">
               <a>
                 <img src={cr} alt="Home" className="img-fluid proj_img" />
@@ -158,31 +159,7 @@ const Home = () => {
 
       </div>
       <div className="tag-divider-section"></div>
-      {/* <div id="skills" className="skills">
-        <div className="header-skills">
-          <p className="skill-icon">
-            <GiSkills />
-          </p>
-          <h2>Skills</h2>
-        </div>
-        <div className="subTitle">
-          <p>
-            <span className="special">Data Analyst </span>with experience
-            including SQL, Python, Tableau, and Power BI. I am proficient in
-            handling large datasets, optimizing queries, and creating complex
-            visualizations.
-          </p>
-        </div>
-        <div className="row container-skill">
-          <div className="col-md-6 chart">
-            <RadarChart />
-          </div>
-          <div className="col-md-6 tool">
-            <Parallax />
-          </div>
-        </div>
-      </div> */}
-      <Parallax />
+      <Skills />
       <Footer />
     </>
   );

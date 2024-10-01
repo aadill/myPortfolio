@@ -4,6 +4,7 @@
   background-color: var(--bg-color);
   color: var(--font-color);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 html[data-theme="dark"] {

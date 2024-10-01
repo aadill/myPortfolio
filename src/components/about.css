@@ -218,3 +218,34 @@ h2 {
   right: 16px;
   width: 100px;
 }
+
+@media (min-width: 400px) {
+  .exp {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .card-about {
+    width: 100% !important; /* Full width on smaller screens */
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px !important;
+    right: 0px !important;
+    left: 0;
+  }
+
+  .fa-arrow-right {
+    font-size: 20px;
+  }
+  .pic .brief {
+    font-size: 12px;
+    text-align: justify;
+    margin-left: 15% !important;
+  }
+  .container .card-about p{
+    right: 0px !important;
+    left: 0;
+  }
+}
